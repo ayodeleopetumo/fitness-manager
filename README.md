@@ -4,16 +4,17 @@ Fuel fitness manager application is a fictitious application built using Angular
 
 Logo credit: By Skydesigner on [Creative Market](https://creativemarket.com/Skydesigner.me/1738435-Fitness-Logo-Strong)
 
-### Features:
+## Features:
 
 - Routing
 - Route Guards
-- Lazy Loading Modules
+- Lazy Loaded Modules
 - Reactive Forms
 - Async/Await
 - State Management
 - Observables
-- Data Persistence (Firebase Database)
+- Database (Firebase Database)
+- Authentication (Firebase Auth)
 
 #### [Todo]:
 
@@ -48,4 +49,4 @@ Visit [localhost:4200](localhost:4200) in your browser.
 
 ## Live Demo
 
-You can view the live demo [here]()
+You can view the live demo [here](https://fitness-manager-app-94f07.firebaseapp.com)
