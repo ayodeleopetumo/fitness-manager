@@ -1,5 +1,9 @@
-<h1>{{ user$ | async | json }}</h1>
+<section>
+  <app-header [user]="user$ | async" (logout)="onLogout()"></app-header>
+  <app-navigation *ngIf="(user$ | async)?.authenticated"></app-navigation>
 
-<div class=wrapper>
-  <router-outlet></router-outlet>
-</div>
+  <div class=wrapper>
+    <router-outlet></router-outlet>
+  </div>
+
+</section>

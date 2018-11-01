@@ -13,9 +13,11 @@ import { AuthModule } from './auth/auth.module';
 // Containers
 
 // Components
+import { HeaderComponent } from './header/components/header.component';
+import { NavigationComponent } from './navigation/components/navigation.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent, NavigationComponent],
   imports: [BrowserModule, AppRoutingModule, AuthModule],
   providers: [Store],
   bootstrap: [AppComponent]
