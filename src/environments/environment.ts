@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyD_8rfrnaTVapp06d-q87b7xgg6RADAebw',
+    authDomain: 'fitness-manager-app-94f07.firebaseapp.com',
+    databaseURL: 'https://fitness-manager-app-94f07.firebaseio.com',
+    projectId: 'fitness-manager-app-94f07',
+    storageBucket: 'fitness-manager-app-94f07.appspot.com',
+    messagingSenderId: '449238552940'
+  }
 };
 
 /*
