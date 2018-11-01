@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { Store } from 'store';
 
 // Feature modules
+import { AuthModule } from './auth/auth.module';
 
 // Containers
 
@@ -15,7 +16,7 @@ import { Store } from 'store';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, AuthModule],
   providers: [Store],
   bootstrap: [AppComponent]
 })
