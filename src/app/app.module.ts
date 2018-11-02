@@ -9,6 +9,7 @@ import { Store } from 'store';
 
 // Feature modules
 import { AuthModule } from './auth/auth.module';
+import { HealthModule } from './health/health.module';
 
 // Containers
 
@@ -18,7 +19,7 @@ import { NavigationComponent } from './navigation/components/navigation.componen
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, NavigationComponent],
-  imports: [BrowserModule, AppRoutingModule, AuthModule],
+  imports: [BrowserModule, AppRoutingModule, AuthModule, HealthModule],
   providers: [Store],
   bootstrap: [AppComponent]
 })
