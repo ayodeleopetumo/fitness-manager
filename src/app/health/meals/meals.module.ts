@@ -7,8 +7,12 @@ import { SharedModule } from '../shared/shared.module';
 
 // Containers
 import { MealsComponent } from './containers/meals/meals.component';
+import { MealComponent } from './containers/meal/meal.component';
 
-const routes: Routes = [{ path: '', component: MealsComponent }];
+const routes: Routes = [
+  { path: '', component: MealsComponent },
+  { path: 'new', component: MealComponent }
+];
 
 @NgModule({
   imports: [
@@ -18,6 +22,6 @@ const routes: Routes = [{ path: '', component: MealsComponent }];
     SharedModule
   ],
   exports: [],
-  declarations: [MealsComponent]
+  declarations: [MealsComponent, MealComponent]
 })
 export class MealsModule {}
