@@ -14,7 +14,8 @@ import { MealComponent } from './containers/meal/meal.component';
 
 const routes: Routes = [
   { path: '', component: MealsComponent },
-  { path: 'new', component: MealComponent }
+  { path: 'new', component: MealComponent },
+  { path: ':id', component: MealComponent }
 ];
 
 @NgModule({
