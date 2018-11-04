@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Observable, Subscription } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 import { MealsService } from '../../../shared/services/meals/meals.service';
 
@@ -30,6 +29,12 @@ import { Store } from 'store';
           <img src="assets/face.svg" alt="face">
           No meals, add a new meal to start
         </div>
+
+        <app-list-item
+          *ngFor="let meal of meals"
+          [item]="meal"
+          (remove)="removeMeal($event)">
+        </app-list-item>
       </div>
 
       <ng-template #loading>
@@ -54,5 +59,9 @@ export class MealsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  removeMeal(meal: Meal) {
+    this.mealsService.removeMeal(meal.key);
   }
 }
