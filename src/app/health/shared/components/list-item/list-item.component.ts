@@ -6,7 +6,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
-import { Meal } from '../../models/meal.interface';
+import { Meal } from '../../models/meals/meal.interface';
 
 @Component({
   selector: 'app-list-item',

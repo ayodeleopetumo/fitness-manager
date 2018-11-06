@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Observable, Subscription } from 'rxjs';
 
-import { Meal } from '../../../shared/models/meal.interface';
+import { Meal } from '../../../shared/models/meals/meal.interface';
 
 import { MealsService } from '../../../shared/services/meals/meals.service';
 import { switchMap } from 'rxjs/operators';
@@ -68,7 +68,7 @@ export class MealComponent implements OnInit, OnDestroy {
     this.backToMeals();
   }
 
-  async removeMeal(meal: Meal) {
+  async removeMeal() {
     const key = this.route.snapshot.params.id;
     await this.mealsService.removeMeal(key);
     this.backToMeals();
