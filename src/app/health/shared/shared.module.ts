@@ -12,10 +12,14 @@ import { ListItemComponent } from './components/list-item/list-item.component';
 import { MealsService } from './services/meals/meals.service';
 import { WorkoutsService } from './services/workouts/workouts.service';
 
+// Pipes
+import { JoinPipe } from './pipes/join.pipe';
+import { WorkoutPipe } from './pipes/workout.pipe';
+
 @NgModule({
   imports: [CommonModule, RouterModule, AngularFireDatabaseModule],
-  exports: [ListItemComponent],
-  declarations: [ListItemComponent]
+  exports: [ListItemComponent, JoinPipe, WorkoutPipe],
+  declarations: [ListItemComponent, JoinPipe, WorkoutPipe]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
