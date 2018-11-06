@@ -21,7 +21,7 @@ import { switchMap } from 'rxjs/operators';
         </h1>
       </div>
 
-      <div *ngIf="workout$ | async as Workout; else loading">
+      <div *ngIf="workout$ | async as workout; else loading">
         <app-workout-form
           [workout]="workout"
           (create)="addWorkout($event)"
