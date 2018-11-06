@@ -17,7 +17,7 @@ import {
   Validators
 } from '@angular/forms';
 
-import { Meal } from '../../../shared/models/meal.interface';
+import { Meal } from '../../../shared/models/meals/meal.interface';
 
 @Component({
   selector: 'app-meal-form',
@@ -31,7 +31,7 @@ import { Meal } from '../../../shared/models/meal.interface';
           <label>
             <h3>Meal name</h3>
             <input type="text" placeholder="e.g. English Breakfast" formControlName="name">
-            <p class="error" *ngIf="required">Workout name is required</p>
+            <p class="error" *ngIf="required">Meal name is required</p>
           </label>
         </div>
 

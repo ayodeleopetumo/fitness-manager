@@ -4,7 +4,7 @@ import { Observable, Subscription } from 'rxjs';
 
 import { MealsService } from '../../../shared/services/meals/meals.service';
 
-import { Meal } from '../../../shared/models/meal.interface';
+import { Meal } from '../../../shared/models/meals/meal.interface';
 
 import { Store } from 'store';
 
