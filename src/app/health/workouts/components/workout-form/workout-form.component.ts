@@ -33,6 +33,11 @@ import { Workout } from '../../../shared/models/workouts/workout.interface';
             <input type="text" placeholder="e.g. English Breakfast" formControlName="name">
             <p class="error" *ngIf="required">Workout name is required</p>
           </label>
+
+          <label>
+            <h3>Type</h3>
+            <app-workout-type formControlName="type"></app-workout-type>
+          </label>
         </div>
 
         <div class="workout-form__submit">
@@ -84,7 +89,8 @@ export class WorkoutFormComponent implements OnInit, OnChanges {
   remove = new EventEmitter<Workout>();
 
   form: FormGroup = this.fb.group({
-    name: ['', Validators.required]
+    name: ['', Validators.required],
+    type: 'strength'
   });
 
   constructor(private fb: FormBuilder) {}
