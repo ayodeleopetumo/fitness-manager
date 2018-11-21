@@ -12,17 +12,15 @@ import {
   styleUrls: ['schedule-controls.component.scss'],
   template: `
     <div class="controls">
-
-      <button type="button" (click)="moveOffset(offset - 1)">
-        <img src="assets/chevron-left.svg">
+      <button type="button" (click)="moveDate(offset - 1)">
+        <img src="assets/chevron-left.svg" />
       </button>
 
-      <p>{{ selected | date:'MMMM d, y' }}</p>
+      <p>{{ selected | date: 'MMMM d, y' }}</p>
 
-      <button type="button" (click)="moveOffset(offset + 1)">
-        <img src="assets/chevron-right.svg">
+      <button type="button" (click)="moveDate(offset + 1)">
+        <img src="assets/chevron-right.svg" />
       </button>
-
     </div>
   `
 })
@@ -35,7 +33,7 @@ export class ScheduleControlsComponent {
   @Output()
   move = new EventEmitter<number>();
 
-  moveOffset(offset: number) {
+  moveDate(offset: number) {
     this.offset = offset;
     this.move.emit(offset);
   }

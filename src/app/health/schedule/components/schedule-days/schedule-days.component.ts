@@ -12,15 +12,14 @@ import {
   styleUrls: ['schedule-days.component.scss'],
   template: `
     <div class="days">
-
       <button
         type="button"
         class="day"
         *ngFor="let day of days; index as i"
-        (click)="selectDay(i)">
+        (click)="selectDay(i)"
+      >
         <span [class.active]="selected === i">{{ day }}</span>
       </button>
-
     </div>
   `
 })
