@@ -5,7 +5,7 @@ import { tap } from 'rxjs/operators';
 import { Store } from 'store';
 
 // Third-party imports
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 import { User } from '../../models/user.interface';
 
@@ -31,7 +31,7 @@ export class AuthService {
   constructor(private af: AngularFireAuth, private store: Store) {}
 
   get user() {
-    return this.af.auth.currentUser;
+    return this.af.currentUser;
   }
 
   get authState() {
@@ -39,14 +39,14 @@ export class AuthService {
   }
 
   createUser(email: string, password: string) {
-    return this.af.auth.createUserWithEmailAndPassword(email, password);
+    return this.af.createUserWithEmailAndPassword(email, password);
   }
 
   loginUser(email: string, password: string) {
-    return this.af.auth.signInWithEmailAndPassword(email, password);
+    return this.af.signInWithEmailAndPassword(email, password);
   }
 
   logoutUser() {
-    return this.af.auth.signOut();
+    return this.af.signOut();
   }
 }

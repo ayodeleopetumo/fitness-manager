@@ -39,7 +39,7 @@ import { switchMap } from 'rxjs/operators';
   `
 })
 export class WorkoutComponent implements OnInit, OnDestroy {
-  workout$: Observable<Workout>;
+  workout$: Observable<Workout | {}>;
   subscription: Subscription;
 
   constructor(
@@ -68,7 +68,7 @@ export class WorkoutComponent implements OnInit, OnDestroy {
     this.backToWorkouts();
   }
 
-  async removeWorkout() {
+  async removeWorkout($event: Workout) {
     const key = this.route.snapshot.params.id;
     await this.worksService.removeWorkout(key);
     this.backToWorkouts();

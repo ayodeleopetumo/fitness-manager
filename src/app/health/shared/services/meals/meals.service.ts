@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 import { Observable, of } from 'rxjs';
 
@@ -28,7 +28,7 @@ export class MealsService {
   ) {}
 
   get uid() {
-    return this.authSerivce.user.uid;
+    return this.authSerivce.user;
   }
 
   getMeal(key: string) {

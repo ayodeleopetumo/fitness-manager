@@ -11,17 +11,17 @@ const routes: Routes = [
   {
     path: 'meals',
     canActivate: [AuthGuard],
-    loadChildren: './meals/meals.module#MealsModule'
+    loadChildren: () => import('./meals/meals.module').then(m => m.MealsModule)
   },
   {
     path: 'schedule',
     canActivate: [AuthGuard],
-    loadChildren: './schedule/schedule.module#ScheduleModule'
+    loadChildren: () => import('./schedule/schedule.module').then(m => m.ScheduleModule)
   },
   {
     path: 'workouts',
     canActivate: [AuthGuard],
-    loadChildren: './workouts/workouts.module#WorkoutsModule'
+    loadChildren: () => import('./workouts/workouts.module').then(m => m.WorkoutsModule)
   }
 ];
 
