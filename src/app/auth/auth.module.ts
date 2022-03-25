@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 
 // Environment settings
 import { environment } from '../../environments/environment';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 export const firebaseConfig: FirebaseAppConfig = environment.firebaseConfig;
 
@@ -20,10 +21,10 @@ const routes: Routes = [
     path: 'auth',
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'login' },
-      { path: 'login', loadChildren: './login/login.module#LoginModule' },
+      { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
       {
         path: 'register',
-        loadChildren: './register/register.module#RegisterModule'
+        loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
       }
     ]
   }
