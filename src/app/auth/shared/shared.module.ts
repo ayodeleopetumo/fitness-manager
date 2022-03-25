@@ -17,7 +17,7 @@ import { AuthGuard } from './guards/auth.guard';
   exports: [AuthFormComponent]
 })
 export class SharedModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<SharedModule> {
     return {
       ngModule: SharedModule,
       providers: [AuthService, AuthGuard]

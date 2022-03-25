@@ -3,18 +3,17 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 // Third-party modules
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireModule, FirebaseAppConfig } from '@angular/fire';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 // Shared modules
 import { SharedModule } from './shared/shared.module';
 
 // Environment settings
 import { environment } from '../../environments/environment';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
-export const firebaseConfig: FirebaseAppConfig = environment.firebaseConfig;
+export const firebaseConfig = environment.firebaseConfig;
 
 const routes: Routes = [
   {

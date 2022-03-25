@@ -39,7 +39,7 @@ import { switchMap } from 'rxjs/operators';
   `
 })
 export class MealComponent implements OnInit, OnDestroy {
-  meal$: Observable<Meal>;
+  meal$: Observable<Meal | {}>;
   subscription: Subscription;
 
   constructor(

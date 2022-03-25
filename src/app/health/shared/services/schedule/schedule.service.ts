@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { tap, map, switchMap, withLatestFrom } from 'rxjs/operators';
@@ -126,6 +126,6 @@ export class ScheduleService {
   }
 
   get uid() {
-    return this.authService.user.uid;
+    return this.authService.user;
   }
 }

@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 import { Observable, of } from 'rxjs';
-
 import { Store } from 'store';
-import { tap, map, filter } from 'rxjs/operators';
 
+import { tap, map, filter } from 'rxjs/operators';
 import { Workout } from '../../models/workouts/workout.interface';
 import { AuthService } from '../../../../auth/shared/services/auth/auth.service';
 
@@ -28,10 +27,10 @@ export class WorkoutsService {
   ) {}
 
   get uid() {
-    return this.authSerivce.user.uid;
+    return this.authSerivce.user;
   }
 
-  getWorkout(key: string) {
+  getWorkout(key: string): Observable<Workout | {}> {
     if (!key) {
       return of({});
     }
