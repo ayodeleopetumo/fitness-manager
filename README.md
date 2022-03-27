@@ -1,6 +1,6 @@
 # Fitness Manager App
 
-Fuel fitness manager application is a fictitious application built using Angular (v 7.0.3) and Firebase (using AngularFire).
+Fuel fitness manager application is a fictitious application built using Angular and Firebase (using AngularFire).
 
 Logo credit: By Skydesigner on [Creative Market](https://creativemarket.com/Skydesigner.me/1738435-Fitness-Logo-Strong)
 
